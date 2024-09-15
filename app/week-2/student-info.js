@@ -7,7 +7,7 @@ export default function StudentInfo() {
 
         <ul>
             <li>
-                <Link href="https://github.com/Miiikeey?tab=repositories">https://github.com</Link>
+                <Link href="https://github.com/Miiikeey/cprg306-assignments">https://github.com</Link>
             </li>
         </ul>
     </div>
