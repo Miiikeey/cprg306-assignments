@@ -1,8 +1,8 @@
 "use client";
 
-import { useState } from "react";
+import { useState,  } from "react";
 
-export default function NewItem() {
+export default function NewItem({ onAddItem }) {
 
     const [name, setName] = useState("");
     const [category, setCategory] = useState("");
@@ -18,13 +18,14 @@ export default function NewItem() {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        const item = { name, quantity, category };
-        console.log(item);
-        alert(`Name: ${name}, Quantity: ${quantity}, Category: ${category}`);
+        const newId = Math.floor(Math.random() * 10000);
+        const newItem = { id: newId, name, quantity, category };
+        onAddItem(newItem);
         setName("");
         setQuantity(1);
         setCategory("produce");
       };
+
 
 
       return (
